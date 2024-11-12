@@ -1,5 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <p>name: {{ Student.name }}</p>
+    <p>lastname: {{Student.lastname}}</p>
+    <p>age: {{Student.age}}</p>
+    <p>course: {{Student.course  }}</p>
+
+    <h3> Students:</h3>
+    {% for student in course.Student.all %}
+        <p>{{comment.content}}</p>
+
+
+
+
+
 <h1>{{ course.name }}</h1>
 <p>{{ course.description }}</p>
 <a href="{% url 'course_update' course.id %}">Edit</a>
 <a href="{% url 'course_delete' course.id %}">Delete</a>
 <a href="{% url 'course_list' %}">Back to list</a>
+course
