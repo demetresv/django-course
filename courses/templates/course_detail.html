@@ -1,16 +1,22 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <p>name: {{ Student.name }}</p>
-    <p>lastname: {{Student.lastname}}</p>
-    <p>age: {{Student.age}}</p>
-    <p>course: {{Student.course  }}</p>
+    <p>name: {{ student.name }}</p>
+    <p>lastname: {{student.lastname}}</p>
+    <p>age: {{student.age}}</p>
+    <p>course: {{student.course  }}</p>
 
     <h3> Students:</h3>
-    {% for student in course.Student.all %}
+    {% for student in course.student.all %}
         <p>{{comment.content}}</p>
 
+    {% endfor %}
 
+    <form method="post">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit">submit</button>
+    </form>
 
 
 
